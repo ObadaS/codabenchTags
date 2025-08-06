@@ -22,4 +22,4 @@ jobs:
           python-version: 3.x
       - run: curl -LsSf https://astral.sh/uv/install.sh | sh
       - run: /home/runner/.local/bin/uv sync 
-      - run: git fetch origin gh-pages --depth=1 && PDF=1 /home/runner/.local/bin/uv run mike deploy -u dev
+      - run: git fetch origin gh-pages --depth=1 && PDF=1 /home/runner/.local/bin/uv run mike deploy -u dev --push
