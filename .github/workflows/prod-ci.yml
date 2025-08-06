@@ -20,8 +20,6 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: 3.x
-      - run: your command here
-        working-directory: documentation/
       - run: curl -LsSf https://astral.sh/uv/install.sh | sh
       - run: /home/runner/.local/bin/uv sync 
-      - run: PDF=1 /home/runner/.local/bin/uv run mike deploy -u  ${{ github.ref_name }} latest
+      - run: git fetch origin gh-pages --depth=1 && PDF=1 /home/runner/.local/bin/uv run mike deploy -u  ${{ github.ref_name }} latest
