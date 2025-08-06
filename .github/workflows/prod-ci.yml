@@ -23,5 +23,5 @@ jobs:
       - run: your command here
         working-directory: documentation/
       - run: curl -LsSf https://astral.sh/uv/install.sh | sh
-      - run: /home/runner/.local/binuv sync 
-      - run: PDF=1 /home/runner/.local/binuv run mike deploy -u  ${{ github.ref_name }} latest
+      - run: /home/runner/.local/bin/uv sync 
+      - run: PDF=1 /home/runner/.local/bin/uv run mike deploy -u  ${{ github.ref_name }} latest
