@@ -21,5 +21,5 @@ jobs:
         with:
           python-version: 3.x
       - run: curl -LsSf https://astral.sh/uv/install.sh | sh
-      - run: /root/.local/bin/uv sync 
-      - run: PDF=1 /root/.local/bin/uv run mike deploy -u dev
+      - run: /home/runner/.local/binuv sync 
+      - run: PDF=1 /home/runner/.local/binuv run mike deploy -u dev
